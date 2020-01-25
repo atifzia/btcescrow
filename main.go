@@ -20,7 +20,7 @@ import (
 	"github.com/didip/tollbooth_echo"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
-	"github.com/labstack/echo/v4/middleware"
+	"github.com/labstack/echo/middleware"
 	"github.com/rs/xid"
 	"github.com/tidwall/gjson"
 	"golang.org/x/crypto/bcrypt"
@@ -626,9 +626,10 @@ func main() {
 	lmt := tollbooth.NewLimiter(3, &limiter.ExpirableOptions{DefaultExpirationTTL: time.Hour})
 	lmtAdmin := tollbooth.NewLimiter(2, &limiter.ExpirableOptions{DefaultExpirationTTL: time.Hour})
 
+
 	// Set a custom message.
-	lmt.SetMessage("You have reached maximum request limit.")
-	lmtAdmin.SetMessage("You have reached maximum request limit.")
+	//lmt.SetMessage("You have reached maximum request limit.")
+	//lmtAdmin.SetMessage("You have reached maximum request limit.")
 
 	e := echo.New()
 
