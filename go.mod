@@ -1,6 +1,6 @@
 module github.com/tegk/WebBitcoinEscrow
 
-go 1.13
+go1.13
 
 require (
 	github.com/didip/tollbooth v4.0.2+incompatible
